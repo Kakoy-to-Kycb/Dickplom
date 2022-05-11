@@ -100,5 +100,18 @@ namespace Lopushok.Pages
                 }
             }
         }
+
+        private void btnImage_Click(object sender, RoutedEventArgs e)
+        {
+            ImgWindow window = new ImgWindow();
+            window.ShowDialog();
+
+            if (window.DialogResult == true)
+            {
+                product.Image = window.ImgUri;
+                DataContext = null;
+                DataContext = product;
+            }
+        }
     }
 }

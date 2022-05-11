@@ -38,5 +38,14 @@ namespace Lopushok
             }
         }
 
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (!MainFrame.CanGoBack)
+            {
+                btnBack.Visibility = Visibility.Hidden;
+            }
+            else
+                btnBack.Visibility = Visibility.Visible;
+        }
     }
 }
