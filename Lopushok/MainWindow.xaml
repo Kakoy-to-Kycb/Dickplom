@@ -22,7 +22,7 @@
             <Label Content="Лопушок" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
 
         <Button Name="btnBack" Content="Назад" Click="btnBack_Click" HorizontalAlignment="Right"/>
 

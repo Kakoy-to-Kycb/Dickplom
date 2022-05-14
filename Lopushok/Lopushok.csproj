@@ -77,6 +77,9 @@
     <Compile Include="AgentType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ImgWindow.xaml.cs">
+      <DependentUpon>ImgWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Material.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -103,6 +106,7 @@
     </Compile>
     <Compile Include="Model\DB.cs" />
     <Compile Include="Model\Manager.cs" />
+    <Compile Include="Model\Material.cs" />
     <Compile Include="Model\MaterialType.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductType.cs" />
@@ -142,6 +146,10 @@
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="ImgWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

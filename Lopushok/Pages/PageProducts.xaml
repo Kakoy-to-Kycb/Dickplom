@@ -53,6 +53,7 @@
                             <TextBlock Text="{Binding ArticleNumber}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Материалы: "/>
+                                <TextBlock Text="{Binding MaterialsList}" TextWrapping="Wrap" Width="250"/>
                             </StackPanel>
                         </StackPanel>
 
@@ -60,7 +61,7 @@
 
                         <StackPanel Grid.Column="3">
                             <TextBlock Text="Стоимость: "/>
-                            <TextBlock Text="{Binding Cost}"/>
+                            <TextBlock Text="{Binding Price}"/>
                         </StackPanel>
 
                     </Grid>

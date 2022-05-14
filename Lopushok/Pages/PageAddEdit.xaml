@@ -40,7 +40,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBox Name="tbImage" Text="{Binding Image}" Grid.Column="0"/>
-            <Button Name="btnImage" Content="Выбрать" Grid.Column="1" Width="auto" FontSize="10"/>
+            <Button Name="btnImage" Content="Выбрать" Grid.Column="1" Width="auto" FontSize="10" Click="btnImage_Click"/>
             <Image Name="imgLogo" Source="{Binding LogoProd}" Grid.Column="2"/>
         </Grid>
 
