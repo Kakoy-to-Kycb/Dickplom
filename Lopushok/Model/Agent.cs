@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lopushok
 {
-    partial class Agent
+    public partial class Agent
     {
         public override string ToString()
         {
-            return Title.ToString(); ;
+            return Title;
         }
     }
 }

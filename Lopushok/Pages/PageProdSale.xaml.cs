@@ -25,7 +25,7 @@ namespace Lopushok
         public PageProdSale()
         {
             InitializeComponent();
-            dgOrder.ItemsSource = LopushokEntities1.GetContext().Order.ToList();
+            dgOrder.ItemsSource = DB.db.Order.ToList();
            
         }
 
