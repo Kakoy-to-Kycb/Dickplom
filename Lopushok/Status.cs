@@ -12,13 +12,18 @@ namespace Lopushok
     using System;
     using System.Collections.Generic;
     
-    public partial class Shop
+    public partial class Status
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public string Address { get; set; }
-        public int AgentID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Status()
+        {
+            this.Order = new HashSet<Order>();
+        }
     
-        public virtual Agent Agent { get; set; }
+        public int StatusID { get; set; }
+        public string Title { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

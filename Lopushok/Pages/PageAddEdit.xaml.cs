@@ -26,15 +26,21 @@ namespace Lopushok.Pages
         public PageAddEdit(Product currentProd)
         {
             InitializeComponent();
-
-            if (product.ID == 0)
+            if (Properties.Settings.Default.glodalRole != "admin")
             {
                 btnDelete.Visibility = Visibility.Hidden;
+
             }
 
             if (currentProd != null)
             {
                 product = currentProd;
+            }
+
+
+            if (product.ID == 0)
+            {
+                btnDelete.Visibility = Visibility.Hidden;
             }
 
             cbTypes.ItemsSource = DB.db.ProductType.ToList();
@@ -50,7 +56,7 @@ namespace Lopushok.Pages
             if (string.IsNullOrWhiteSpace(product.ArticleNumber))
                 errors.AppendLine("Укажите артикул продукта");
             if (string.IsNullOrWhiteSpace(product.MinCostForAgent.ToString()))
-                errors.AppendLine("Укажите минимальную стоимость");
+                errors.AppendLine("Укажите стоимость");
             if (string.IsNullOrWhiteSpace(product.ProductionWorkshopNumber.ToString()))
                 errors.AppendLine("Укажите номер цеха производства");
             if (string.IsNullOrWhiteSpace(product.ProductionPersonCount.ToString()))

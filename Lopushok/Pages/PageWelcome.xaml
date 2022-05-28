@@ -10,13 +10,13 @@
 
     <Grid>
         <StackPanel Margin="20">
-            <Label Content="Авторизация" FontSize="35" HorizontalAlignment="Center"/>
+            <Label Content="Авторизация" HorizontalAlignment="Center" FontFamily="Gabriola" FontSize="45"/>
             <Separator/>
-            <Label Content="Логин" FontSize="30" Margin="130,0"/>
-            <TextBox Name="tbUserLogin" Height="35" Width="500"/>
-            <Label Content="Пароль" FontSize="30" Margin="130,0"/>
+            <Label Content="Логин" FontSize="35" Margin="130,0" FontFamily="Gabriola" />
+            <TextBox Name="tbUserLogin" Height="35" Width="500" TextAlignment="Left"/>
+            <Label Content="Пароль" FontSize="35" Margin="130,0" FontFamily="Gabriola"/>
             <PasswordBox Name="pbPassword" Height="35" Width="500"/>
         </StackPanel>
-        <Button Name="btnProducts" Content="Вход" Click="btnProducts_Click" VerticalAlignment="Bottom" Margin="0,0,0,30"/>
+        <Button Name="btnProducts" Content="Вход" Click="btnProducts_Click" VerticalAlignment="Bottom" Margin="0,0,0,30" FontFamily="Gabriola" FontSize="25"/>
     </Grid>
 </Page>

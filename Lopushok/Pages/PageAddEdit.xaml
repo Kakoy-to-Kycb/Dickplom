@@ -24,7 +24,7 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Редактор" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Редактор" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" FontSize="30"/>
 
         <TextBox Name="tbArticle" Text="{Binding ArticleNumber}" Grid.Row="1" Grid.Column="1"/>
         <TextBox Name="tbTitle" Text="{Binding Title}" Grid.Row="2" Grid.Column="1"/>
@@ -49,13 +49,13 @@
         <TextBlock Text="Тип продукта" Grid.Row="3" Grid.Column="0" Style="{DynamicResource tbEdit}"/>
         <TextBlock Text="Кол-во человек для производства" TextWrapping="Wrap" Grid.Row="4" Grid.Column="0" Style="{DynamicResource tbEdit}"/>
         <TextBlock Text="Номер цеха" Grid.Row="1" Grid.Column="2" Style="{DynamicResource tbEdit}"/>
-        <TextBlock Text="Мин. стоимость" Grid.Row="2" Grid.Column="2" Style="{DynamicResource tbEdit}"/>
+        <TextBlock Text="Стоимость" Grid.Row="2" Grid.Column="2" Style="{DynamicResource tbEdit}"/>
         <TextBlock Text="Описание" Grid.Row="3" Grid.Column="2" Style="{DynamicResource tbEdit}"/>
         <TextBlock Text="Изображение" Grid.Row="4" Grid.Column="2" Style="{DynamicResource tbEdit}"/>
 
         <StackPanel Grid.Row="5" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Name="btnSave" Content="Сохранить" Click="btnSave_Click"/>
-            <Button Name="btnDelete" Content="Удалить" Click="btnDelete_Click"/>
+            <Button Name="btnSave" Content="Сохранить" Click="btnSave_Click" FontFamily="Gabriola" FontSize="25"/>
+            <Button Name="btnDelete" Content="Удалить" Click="btnDelete_Click" FontFamily="Gabriola" FontSize="25"/>
         </StackPanel>
 
     </Grid>

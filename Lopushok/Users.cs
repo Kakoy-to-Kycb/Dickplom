@@ -18,5 +18,8 @@ namespace Lopushok
         public string UserName { get; set; }
         public string UserLogin { get; set; }
         public string UserPassword { get; set; }
+        public int UserRole { get; set; }
+    
+        public virtual Roles Roles { get; set; }
     }
 }

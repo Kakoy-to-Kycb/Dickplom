@@ -17,7 +17,6 @@ namespace Lopushok
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Material()
         {
-            this.MaterialCountHistory = new HashSet<MaterialCountHistory>();
             this.ProductMaterial = new HashSet<ProductMaterial>();
             this.Supplier = new HashSet<Supplier>();
         }
@@ -34,8 +33,6 @@ namespace Lopushok
         public int MaterialTypeID { get; set; }
     
         public virtual MaterialType MaterialType { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MaterialCountHistory> MaterialCountHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductMaterial> ProductMaterial { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

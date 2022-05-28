@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lopushok"
         mc:Ignorable="d"
-        Title="Лопушок" Height="600" Width="1000"
+        Title="Лопушок" Height="650" Width="1000"
         MinHeight="600" MinWidth="1000"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Row="0"/>
         <Rectangle Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="/Resources/Lopushok.png"/>
-            <Label Content="Лопушок" VerticalContentAlignment="Center"/>
+            <Label Content="Лопушок" VerticalContentAlignment="Center" FontSize="55" FontFamily="Gabriola"/>
         </StackPanel>
 
         <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
 
-        <Button Name="btnBack" Content="Назад" Click="btnBack_Click" HorizontalAlignment="Right"/>
+        <Button Name="btnBack" Content="Назад" Click="btnBack_Click" HorizontalAlignment="Right" FontFamily="Gabriola" FontSize="25"/>
 
     </Grid>
 </Window>

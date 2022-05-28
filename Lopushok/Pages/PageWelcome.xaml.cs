@@ -24,7 +24,9 @@ namespace Lopushok.Pages
         public PageWelcome()
         {
             InitializeComponent();
+            
         }
+
 
         private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
@@ -39,8 +41,34 @@ namespace Lopushok.Pages
                 }
                 else
                 {
-                    MessageBox.Show("Здравствуйте, " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Manager.mainFrame.Navigate(new PageProducts());
+                    switch (userLog.UserRole)
+                    {
+                        case 1:
+                            Properties.Settings.Default.glodalRole = "admin";
+                            MessageBox.Show("Здравствуйте, Администратор " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Manager.mainFrame.Navigate(new PageProducts());
+                            break;
+
+                        case 2:
+                            Properties.Settings.Default.glodalRole = "manager";
+                            MessageBox.Show("Здравствуйте, Менеджер " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Manager.mainFrame.Navigate(new PageManager());
+                            
+                            break;
+
+                        case 3:
+                            Properties.Settings.Default.glodalRole = "guest";
+                            MessageBox.Show("Здравствуйте, Клиент " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Manager.mainFrame.Navigate(new PageProducts());
+                            break;
+
+                        default:
+                            MessageBox.Show("Проверьте введеные данные!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            Manager.mainFrame.Navigate(new PageProducts());
+                            break;
+                    }
+                    /*MessageBox.Show("Здравствуйте, " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Manager.mainFrame.Navigate(new PageProducts());*/
                 }
             }
             catch (Exception ex)

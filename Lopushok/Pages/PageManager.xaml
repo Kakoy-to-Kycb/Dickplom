@@ -1,0 +1,18 @@
+﻿<Page x:Class="Lopushok.PageManager"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lopushok"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Меню менеджера">
+
+    <Grid>
+        <Label Content="Меню менеджера" HorizontalAlignment="Center" Margin="15" FontSize="40" FontFamily="Gabriola"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="btnMprod" Content="Продукция" Width="200" Height="50" FontSize="30" FontFamily="Gabriola" Click="btnMprod_Click"/>
+            <Button Name="btnProdSales" Content="Заявки" Width="200" Height="50" FontSize="30" FontFamily="Gabriola" Click="btnProdSales_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -25,6 +25,11 @@ namespace Lopushok.Pages
         public PageProducts()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.glodalRole != "admin")
+            {
+                btnAdd.Visibility = Visibility.Hidden;
+               
+            }
 
             var currentProducts = DB.db.Product.ToList();
             var sort = new List<string>();
@@ -136,5 +141,6 @@ namespace Lopushok.Pages
             DB.db.ChangeTracker.Entries().ToList().ForEach(a => a.Reload());
             lvProducts.ItemsSource = DB.db.Product.ToList();
         }
+
     }
 }

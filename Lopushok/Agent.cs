@@ -17,9 +17,7 @@ namespace Lopushok
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Agent()
         {
-            this.AgentPriorityHistory = new HashSet<AgentPriorityHistory>();
-            this.ProductSale = new HashSet<ProductSale>();
-            this.Shop = new HashSet<Shop>();
+            this.Order = new HashSet<Order>();
         }
     
         public int ID { get; set; }
@@ -36,10 +34,6 @@ namespace Lopushok
     
         public virtual AgentType AgentType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AgentPriorityHistory> AgentPriorityHistory { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductSale> ProductSale { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shop> Shop { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

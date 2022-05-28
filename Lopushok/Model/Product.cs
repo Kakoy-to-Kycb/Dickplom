@@ -36,21 +36,11 @@ namespace Lopushok
             set { }
         }
 
-        public decimal Price
+        public override string ToString()
         {
-            get
-            {
-                decimal price = 0;
-
-                foreach (var item in ProductMaterial)
-                {
-                    
-                    price += item.Material.Cost;
-                }
-                return price;
-            }
-            set { }
+            return Title;
         }
+
     }
 
 

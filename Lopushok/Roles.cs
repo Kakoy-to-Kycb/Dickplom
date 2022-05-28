@@ -12,13 +12,11 @@ namespace Lopushok
     using System;
     using System.Collections.Generic;
     
-    public partial class MaterialCountHistory
+    public partial class Roles
     {
         public int ID { get; set; }
-        public int MaterialID { get; set; }
-        public System.DateTime ChangeDate { get; set; }
-        public double CountValue { get; set; }
+        public string Title { get; set; }
     
-        public virtual Material Material { get; set; }
+        public virtual Users Users { get; set; }
     }
 }
