@@ -15,18 +15,9 @@ namespace Lopushok
     
     public partial class LopushokEntities1 : DbContext
     {
-        private static LopushokEntities1 _context;
-
         public LopushokEntities1()
             : base("name=LopushokEntities1")
         {
-        }
-
-        public static LopushokEntities1 GetContext()
-        {
-            if (_context == null )
-                _context = new LopushokEntities1();
-            return _context;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

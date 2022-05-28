@@ -26,14 +26,18 @@ namespace Lopushok.Pages
         public PageOrderAdd(Order selectedOrder)
         {
             InitializeComponent();
-            cbAgentOrder.ItemsSource = LopushokEntities1.GetContext().Agent.ToList();
-            cbProdOrder.ItemsSource = LopushokEntities1.GetContext().Product.ToList();
-            cbStatusOrder.ItemsSource = LopushokEntities1.GetContext().Status.ToList();
+            cbAgentOrder.ItemsSource = DB.db.Agent.ToList();
+            cbProdOrder.ItemsSource = DB.db.Product.ToList();
+            cbStatusOrder.ItemsSource = DB.db.Status.ToList();
             
             if(selectedOrder != null)
                 order = selectedOrder;
 
             DataContext = order;
+
+            cbStatusOrder.DisplayMemberPath = "Title";
+            cbStatusOrder.SelectedValuePath = "StatusID";
+
         }
 
         private void tbCountOrder_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -48,13 +52,13 @@ namespace Lopushok.Pages
         {
             if (order.OrderID == 0)
             {
-                LopushokEntities1.GetContext().Order.Add(order);
+                DB.db.Order.Add(order);
 
             }
 
             try
             {
-                LopushokEntities1.GetContext().SaveChanges();
+                DB.db.SaveChanges();
                 MessageBox.Show("Информация сохранена", "Уведомление");
                 Manager.mainFrame.GoBack();
             }
@@ -73,8 +77,8 @@ namespace Lopushok.Pages
             {
                 try
                 {
-                    LopushokEntities1.GetContext().Order.Remove(order);
-                    LopushokEntities1.GetContext().SaveChanges();
+                    DB.db.Order.Remove(order);
+                    DB.db.SaveChanges();
                     MessageBox.Show("Запись удалена", "Уведомление");
                     Manager.mainFrame.GoBack();
                 }

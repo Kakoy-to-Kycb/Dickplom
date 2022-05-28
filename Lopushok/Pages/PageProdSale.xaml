@@ -17,6 +17,24 @@
 
         <Label Content="Заказы" FontSize="30" HorizontalAlignment="Center" FontFamily="Gabriola"/>
 
+        <!--<DataGrid Name="dgOrder" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderID}" Width="auto" />
+                <DataGridTextColumn Header="Заказчик" Binding="{Binding Agent}" Width="auto"/>
+                <DataGridTextColumn Header="Продукция" Binding="{Binding Product}" Width="auto" />
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding SaleDate}" Width="auto" />
+                <DataGridTextColumn Header="Кол-во в заказе" Binding="{Binding ProductCount}" Width="auto"/>
+                <DataGridTextColumn Header="Статусс заказа" Binding="{Binding Status}" Width="auto"/>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="btnEdit" FontFamily="Gabriola" Click="btnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>-->
+        
         <DataGrid Name="dgOrder" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderID}" Width="auto" />
