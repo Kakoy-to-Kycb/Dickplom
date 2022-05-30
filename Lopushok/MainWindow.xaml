@@ -17,6 +17,7 @@
 
         <Rectangle Grid.Row="0"/>
         <Rectangle Grid.Row="2"/>
+        <Button Name="btnExit" Content="Выход" HorizontalAlignment="Left" FontFamily="Gabriola" FontSize="25" Click="btnExit_Click"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="/Resources/Lopushok.png"/>
             <Label Content="Лопушок" VerticalContentAlignment="Center" FontSize="55" FontFamily="Gabriola"/>

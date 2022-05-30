@@ -43,9 +43,19 @@ namespace Lopushok
             if (!MainFrame.CanGoBack)
             {
                 btnBack.Visibility = Visibility.Hidden;
+                btnExit.Visibility = Visibility.Hidden;
             }
             else
+            {
                 btnBack.Visibility = Visibility.Visible;
+                btnExit.Visibility = Visibility.Visible;
+            }
+                
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageWelcome());
         }
     }
 }

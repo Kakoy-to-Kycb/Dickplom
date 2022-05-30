@@ -38,5 +38,14 @@ namespace Lopushok
         {
             Manager.mainFrame.Navigate(new PageOrderAdd(null));
         }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                DB.db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                dgOrder.ItemsSource = DB.db.Order.ToList();
+            }
+        }
     }
 }

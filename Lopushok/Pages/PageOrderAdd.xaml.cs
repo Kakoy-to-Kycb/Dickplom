@@ -38,6 +38,11 @@ namespace Lopushok.Pages
             cbStatusOrder.DisplayMemberPath = "Title";
             cbStatusOrder.SelectedValuePath = "StatusID";
 
+            if(order.OrderID == 0)
+            {
+                btnDeleteOrder.Visibility = Visibility.Hidden;
+            }
+
         }
 
         private void tbCountOrder_PreviewTextInput(object sender, TextCompositionEventArgs e)
