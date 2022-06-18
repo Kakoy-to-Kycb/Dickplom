@@ -30,7 +30,7 @@ namespace Lopushok.Pages
 
         private void btnProducts_Click(object sender, RoutedEventArgs e)
         {
-            //Manager.mainFrame.Navigate(new PageProducts());
+            
             try
             {
                 var userLog = DB.db.Users.FirstOrDefault(x => x.UserLogin == tbUserLogin.Text && x.UserPassword == pbPassword.Password);
@@ -67,8 +67,7 @@ namespace Lopushok.Pages
                             Manager.mainFrame.Navigate(new PageProducts());
                             break;
                     }
-                    /*MessageBox.Show("Здравствуйте, " + userLog.UserName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Manager.mainFrame.Navigate(new PageProducts());*/
+                    
                 }
             }
             catch (Exception ex)

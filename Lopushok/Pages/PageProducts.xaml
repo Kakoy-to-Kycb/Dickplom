@@ -32,7 +32,7 @@
             <RadioButton Name="rbDesc" Content="По убыванию" Click="rbAsc_Click"/>
         </StackPanel>
 
-        <ListView Name="lvProducts" Grid.Row="2" Grid.ColumnSpan="4" IsVisibleChanged="lvProducts_IsVisibleChanged" >
+        <ListView Name="lvProducts" Grid.Row="2" Grid.ColumnSpan="4" IsVisibleChanged="lvProducts_IsVisibleChanged" ToolTip="Для редактирования дважды нажмите на нужный продукт" MouseDoubleClick="lvProducts_MouseDoubleClick_1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -56,8 +56,6 @@
                                 <TextBlock Text="{Binding MaterialsList}" TextWrapping="Wrap" Width="250"/>
                             </StackPanel>
                         </StackPanel>
-
-                        <Button Name="btnEdit" Content="Изменить" Grid.Column="2" Click="btnEdit_Click"/>
 
                         <StackPanel Grid.Column="3">
                             <TextBlock Text="Стоимость: "/>

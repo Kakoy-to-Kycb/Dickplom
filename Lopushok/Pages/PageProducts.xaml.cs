@@ -28,7 +28,9 @@ namespace Lopushok.Pages
             if (Properties.Settings.Default.glodalRole != "admin")
             {
                 btnAdd.Visibility = Visibility.Hidden;
-               
+                lvProducts.MouseDoubleClick -= lvProducts_MouseDoubleClick_1;
+                lvProducts.ToolTip = null;
+
             }
 
             var currentProducts = DB.db.Product.ToList();
@@ -116,10 +118,6 @@ namespace Lopushok.Pages
             Manager.mainFrame.Navigate(new PageAddEdit(null));
         }
 
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.mainFrame.Navigate(new PageAddEdit((sender as Button).DataContext as Product));
-        }
 
         private void cbTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -142,5 +140,14 @@ namespace Lopushok.Pages
             lvProducts.ItemsSource = DB.db.Product.ToList();
         }
 
+        private void lvProducts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void lvProducts_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
+        {
+            Manager.mainFrame.Navigate(new PageAddEdit(lvProducts.SelectedItem as Product));
+        }
     }
 }
